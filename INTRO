@@ -49,6 +49,10 @@ map ,* :call CommentLinePincer('/* ', ' */')<CR>+
 
 and/or map Meta-c (Alt-c) and Meta-Shift-C for different FileTypes.
 
+Comments by default start at the first character on the line. To start
+comments at the beginning of the line instead, set this in your vimrc file:
+let g:ToggleCommentAtLineBeginning = 1 
+
 For more detailed description and installation instructions see the README file.
 
 

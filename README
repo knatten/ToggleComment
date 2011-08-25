@@ -29,6 +29,9 @@ INSTALL
 
 - see filetype.vim and syntax/* in your Vim installation directory ($VIMRUNTIME)
   for programming languages and their comments
+- comments by default start at the first character on the line. To start
+  comments at the beginning of the line instead, set this in your vimrc file:
+  let g:ToggleCommentAtLineBeginning = 1 
 - this is a recommended example to put into your vimrc file and change
   to suite your needs (e.g. space after the comment characters)
 
@@ -50,6 +53,9 @@ autocmd FileType c    noremap <silent> <buffer> <M-c> :call CommentLineToEnd ('/
 autocmd FileType c    noremap <silent> <buffer> <M-C> :call CommentLinePincer('/* ', ' */')<CR>+
 autocmd FileType make noremap <silent> <buffer> <M-c> :call CommentLineToEnd ('# ')<CR>+
 autocmd FileType html noremap <silent> <buffer> <M-c> :call CommentLinePincer('<!-- ', ' -->')<CR>+
+
+" Start comments on beginning of line (1) or at first character (0)
+let g:ToggleCommentAtLineBeginning = 0
 === CUT HERE ===================================================================
 
 - you might add <unique> to prevent overwriting an existing mapping
